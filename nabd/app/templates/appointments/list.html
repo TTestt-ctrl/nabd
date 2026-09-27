@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Your appointments</h1>
+<ul>
+  {% for a in appointments %}
+    <li>{{ a.scheduled_at }} — {{ a.clinic }} with {{ a.doctor_name }} ({{ a.status }})</li>
+  {% else %}
+    <li>No appointments yet.</li>
+  {% endfor %}
+</ul>
+{% endblock %}

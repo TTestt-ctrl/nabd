@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Nabd</title>
+</head>
+<body>
+  <header><a href="/appointments/">Nabd</a></header>
+  {% with messages = get_flashed_messages() %}
+    {% for message in messages %}<p class="flash">{{ message }}</p>{% endfor %}
+  {% endwith %}
+  <main>{% block content %}{% endblock %}</main>
+</body>
+</html>
